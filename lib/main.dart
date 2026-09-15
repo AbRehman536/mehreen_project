@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mehreen_project/bottom_bar.dart';
 import 'package:mehreen_project/date_time_picker.dart';
+import 'package:mehreen_project/tabBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: DateTimePicker()
+      home: BottomBarScreen()
     );
   }
 }

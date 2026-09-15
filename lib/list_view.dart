@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mehreen_frontend/models/chatList.dart';
+
+import 'models/chatList.dart';
 
 class ListViewScreen extends StatefulWidget {
   const ListViewScreen({super.key});

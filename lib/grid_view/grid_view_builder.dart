@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mehreen_frontend/models/grid_mode.dart';
+
+import '../models/grid_mode.dart';
 
 class GridViewBuilder extends StatefulWidget {
   const GridViewBuilder({super.key});
