@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mehreen_project/bottom_bar.dart';
 import 'package:mehreen_project/date_time_picker.dart';
+import 'package:mehreen_project/passing_parameters/screen_1.dart';
+import 'package:mehreen_project/provider/screen_a.dart';
+import 'package:mehreen_project/provider/user_provider.dart';
 import 'package:mehreen_project/tabBar.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (context) => UserProvider()),
+  ],
+  child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -33,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: BottomBarScreen()
+      home: ScreenA()
     );
   }
 }
