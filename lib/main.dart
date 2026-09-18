@@ -4,6 +4,7 @@ import 'package:mehreen_project/date_time_picker.dart';
 import 'package:mehreen_project/passing_parameters/screen_1.dart';
 import 'package:mehreen_project/provider/screen_a.dart';
 import 'package:mehreen_project/provider/user_provider.dart';
+import 'package:mehreen_project/settings.dart';
 import 'package:mehreen_project/tabBar.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ScreenA()
+      home: SettingsScreen()
     );
   }
 }
