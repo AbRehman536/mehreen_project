@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -103,6 +104,71 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   selectedGender = value;
                 });
               }),
+          Pinput(
+            length: 6,
+            showCursor: true,
+            onCompleted: (value){
+              print(value);
+            },
+            defaultPinTheme: PinTheme(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: .circular(10),
+                border: Border.all(
+                  color: Colors.black
+                )
+              ),
+              textStyle: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w900,
+                color: Colors.red
+              )
+            ),
+          ),
+          ElevatedButton(onPressed: (){
+            showModalBottomSheet(
+              isDismissible: false,
+                context: context,
+              builder: (BuildContext context) {
+                  return Column(
+                    children: [
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.person),
+                          title: Text("Profile"),
+                          trailing: Icon(Icons.arrow_forward_ios_sharp),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.notification_add),
+                          title: Text("Notifications"),
+                          trailing: Icon(Icons.arrow_forward_ios_sharp),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.settings),
+                          title: Text("Settings"),
+                          trailing: Icon(Icons.arrow_forward_ios_sharp),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.logout),
+                          title: Text("Logout"),
+                          trailing: Icon(Icons.arrow_forward_ios_sharp),
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ),
+                    ],
+                  );
+              }, );
+          }, child: Text("Show Bottom Sheet"))
         ],
       ),
     );
