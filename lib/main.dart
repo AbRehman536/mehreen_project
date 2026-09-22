@@ -4,6 +4,9 @@ import 'package:mehreen_project/date_time_picker.dart';
 import 'package:mehreen_project/passing_parameters/screen_1.dart';
 import 'package:mehreen_project/provider/screen_a.dart';
 import 'package:mehreen_project/provider/user_provider.dart';
+import 'package:mehreen_project/screens/home/beverages.dart';
+import 'package:mehreen_project/screens/home/favorite.dart';
+import 'package:mehreen_project/screens/home/myCart.dart';
 import 'package:mehreen_project/selections/multiple_selection.dart';
 import 'package:mehreen_project/selections/single_selection.dart';
 import 'package:mehreen_project/settings.dart';
@@ -43,7 +46,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MultipleSelection()
+      home: BeveragesScreen()
     );
   }
 }
